@@ -5,6 +5,11 @@ import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram, } from 'react-icons
 
 
 const Navbar = () => {
+    const [nav, setNav] = useState (false)
+
+    const handleNav = () => {
+        setNav(!nav)
+    }
     return (
     <div className='w-full min-h-[50px] flex justify-between items-center absolute z-10 text-white bg-black'>
         <ul className='hidden sm:flex px-4'>
@@ -30,18 +35,18 @@ const Navbar = () => {
             <div className='sm:hidden z-10'>
             <FaBars size={20} className='mr-4 cursor-pointer'/>
             </div>
-        <div className={'overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300'}>
-            <ul>
-            <li>
+        <div className={'overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex flex-col'}>
+            <ul className='h-full w-full text-center pt-12'>
+            <li className='text-2xl py-8'>
                <a href="#">Home</a>
            </li>
-           <li>
+           <li className='text-2xl py-8'>
                <a href="#gallery">Gallery</a>
            </li>
-           <li>
+           <li className='text-2xl py-8'>
                <a href="#deals">Deals</a>
            </li>
-           <li>
+           <li className='text-2xl py-8'>
                <a href="#contact">Contact</a>
            </li>
             </ul>
