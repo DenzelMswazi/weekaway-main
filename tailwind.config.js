@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('taiwindcss'),
+    require('autoprefixer'),
+  ],
 }
 
