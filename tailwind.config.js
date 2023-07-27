@@ -5,8 +5,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('taiwindcss'),
-    require('autoprefixer'),
+    
   ],
 }
 
